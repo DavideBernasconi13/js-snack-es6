@@ -157,8 +157,57 @@ console.log('Pesi bici è un array con dentro tutti i pesi', pesiBici);
 // filtro l'array e definisco il minore 
 const lower = biciclette.filter((el) => el.peso === Math.min(...pesiBici));
 //restituisce un array con un oggetto??? 
-console.log(lower, lower[0].nome);
+//console.log(lower, lower[0].nome);
 const { nome, peso } = lower[0];
-console.log(nome, peso);
 console.log(`La bici che pesa di meno è ${nome} con un peso di ${peso}`);
 
+// SNACK 4
+// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
+// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+const squadre = [
+    {
+        nomeS: 'Milan',
+        punti: 0,
+        falli: 0,
+    },
+    {
+        nomeS: 'Inter',
+        punti: 0,
+        falli: 0,
+    },
+    {
+        nomeS: 'Juve',
+        punti: 0,
+        falli: 0,
+    },
+    {
+        nomeS: 'Sampdoria',
+        punti: 0,
+        falli: 0,
+    },
+]
+console.log(squadre);
+
+squadre.forEach((el) => {
+    const generateRndNum = (parseInt(Math.random() * 10 + 1));
+    let punti = el.punti + generateRndNum;
+    let falli = el.falli + generateRndNum;
+    el.punti = punti;
+    el.falli = falli;
+    return el.punti, el.falli;
+})
+console.log(squadre);
+
+const { nomeS, falli } = newObject;
+
+newArraySquadre = [
+    squadre.forEach((el) => {
+        el.newObject;
+    })
+
+]
+
+console.log(newArraySquadre); 
