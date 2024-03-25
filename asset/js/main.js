@@ -116,3 +116,47 @@ overGradeId.forEach(el => {
     overGradeIdPrint.appendChild(liEl);
 })
 console.log(overGradeId);
+
+// SNACK 3
+// Creare un array di oggetti:
+// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+// Stampare in console la bici con peso minore utilizzando destructuring e template literal
+
+const biciclette = [
+    {
+        nome: "Bianchi Oltre XR4",
+        peso: 7.8,
+    },
+    {
+        nome: "Colnago V3Rs",
+        peso: 7.2,
+    },
+    {
+        nome: "Pinarello Dogma F12",
+        peso: 7.4,
+    },
+    {
+        nome: "Specialized Tarmac SL7",
+        peso: 6.8,
+    },
+    {
+        nome: "Trek Émonda SLR",
+        peso: 16.4,
+    },
+];
+
+let { peso } = biciclette;
+// crea array con pesi
+let pesiBici = [];
+biciclette.forEach(el => {
+    bicicletta = el.peso;
+    pesiBici.push(bicicletta);
+
+});
+console.log('Pesi bici è', pesiBici);
+
+// filtro l'array e definisco il minore 
+const lower = biciclette.filter((el) => el.peso === Math.min(...pesiBici));
+console.log(lower, lower.nome)
+console.log(`La bici che pesa di meno è ${[(lower.nome)]} con un peso di ${lower.peso}`);
+
