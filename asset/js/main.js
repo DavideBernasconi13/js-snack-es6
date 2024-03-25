@@ -156,8 +156,9 @@ console.log('Pesi bici è un array con dentro tutti i pesi', pesiBici);
 
 // filtro l'array e definisco il minore 
 const lower = biciclette.filter((el) => el.peso === Math.min(...pesiBici));
-console.log(lower, lower.nome)
-const { nome, peso } = lower;
+//restituisce un array con un oggetto??? 
+console.log(lower, lower[0].nome);
+const { nome, peso } = lower[0];
 console.log(nome, peso);
 console.log(`La bici che pesa di meno è ${nome} con un peso di ${peso}`);
 
