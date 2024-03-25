@@ -145,7 +145,6 @@ const biciclette = [
     },
 ];
 
-let { peso } = biciclette;
 // crea array con pesi
 let pesiBici = [];
 biciclette.forEach(el => {
@@ -153,10 +152,12 @@ biciclette.forEach(el => {
     pesiBici.push(bicicletta);
 
 });
-console.log('Pesi bici è', pesiBici);
+console.log('Pesi bici è un array con dentro tutti i pesi', pesiBici);
 
 // filtro l'array e definisco il minore 
 const lower = biciclette.filter((el) => el.peso === Math.min(...pesiBici));
 console.log(lower, lower.nome)
-console.log(`La bici che pesa di meno è ${[(lower.nome)]} con un peso di ${lower.peso}`);
+const { nome, peso } = lower;
+console.log(nome, peso);
+console.log(`La bici che pesa di meno è ${nome} con un peso di ${peso}`);
 
